@@ -24,8 +24,12 @@ class Route {
     return nsBlocks + ewBlocks;
   };
 
-  estimatedTime(){
-    
+  estimatedTime(peakHours = false){
+    if (peakHours) {
+      return blocksTravelled()/2;
+    } else {
+      return blocksTravelled()/3;
+    }
   };
 }
 
