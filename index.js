@@ -22,7 +22,11 @@ class Route {
     const ewBlocks = Math.abs(eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal));
 
     return nsBlocks + ewBlocks;
-  }
+  };
+
+  estimatedTime(){
+
+  };
 }
 
 let eastWest = [
