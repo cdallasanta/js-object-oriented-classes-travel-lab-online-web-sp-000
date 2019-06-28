@@ -19,7 +19,7 @@ class Route {
     // north-south math
     const nsBlock = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
     // east-west math
-    const ewBlocks = Math.abs(eastWest.indexOf(beginningLocation.horizontal) - eastWest.indexOf(endingLocation.horizontal));
+    const ewBlocks = Math.abs(eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal));
 
     return nsBlocks + ewBlocks;
   }
