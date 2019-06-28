@@ -16,15 +16,10 @@ class Route {
   }
 
   blocksTravelled(){
-    const startSt = this.beginningLocation.split(" and ")[0].replace('th','');
-    const startAve = this.beginningLocation.split(" and ")[1].replace('th','');
-    const endSt = this.endingLocation.split(" and ")[0];
-    const endAve = this.endingLocation.split(" and ")[1];
-
     // north-south math
-    const nsBlock = Math.abs(startSt - endSt);
+    const nsBlock = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical);
     // east-west math
-    const ewBlocks = Math.abs(eastWest.indexOf(startAve) - eastWest.indexOf(endAve));
+    const ewBlocks = Math.abs(eastWest.indexOf(beginningLocation.horizontal) - eastWest.indexOf(endingLocation.horizontal));
 
     return nsBlocks + ewBlocks;
   }
